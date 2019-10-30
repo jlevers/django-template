@@ -117,6 +117,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 
+# Media files (uploads, etc)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
 # Logging
 LOGGING_ROOT = os.path.join(BASE_DIR, 'logs/')
 LOGGING = {
@@ -153,4 +158,3 @@ LOGGING = {
 }
 
 SITE_URL = env('SITE_URL')
-
