@@ -9,6 +9,8 @@ verify_ssl = true
 django = "*"
 django-environ = "*"
 gunicorn = "*"
+libsass = "*"
+django-sass-processor = "*"
 
 [requires]
 python_version = "3.7"

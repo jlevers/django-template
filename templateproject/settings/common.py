@@ -27,6 +27,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 INSTALLED_APPS = [
     'templateapp',
+    'sass_processor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -115,6 +116,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder'
+]
 
 
 # Media files (uploads, etc)
@@ -158,3 +164,7 @@ LOGGING = {
 }
 
 SITE_URL = env('SITE_URL')
+
+
+# SASS settings
+SASS_PROCESSOR_ROOT = STATIC_ROOT
