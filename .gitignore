@@ -1,5 +1,5 @@
 logs/*
-static/*
+collected_statics/*
 .venv/
 */**/__pycache__/
 .env
